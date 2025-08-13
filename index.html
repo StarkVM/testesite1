@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+           body
+           {
+                gap: 2000px;
+                display: flex;
+           }
+           .Top{
+                margin-top: 50px;
+                margin-bottom: 200px;
+           }
+           .Game
+           {
+                align-items: center;
+                justify-items: center;
+                gap: 50px;
+           }
+           .botao
+           {
+                background-color: greenyellow;
+                padding: 20px;
+           }
+           .h2
+           {
+                font-size: 20px;
+           }
+    </style>
+    <script>
+        function Jogar(){
+            var sorteio = Math.floor(Math.random() * 6+1);
+
+        switch(sorteio)
+        {
+            case 1:
+                document.getElementById("face").src = "D1.png";
+                break;
+            case 2:
+                document.getElementById("face").src = "D2.png";
+                break;
+            case 3:
+                document.getElementById("face").src = "D3.png";
+                break;
+            case 4:
+                document.getElementById("face").src = "D4.png";
+                break;
+            case 5:
+                document.getElementById("face").src = "D5.png";
+                break;
+            default:
+                document.getElementById("face").src = "D6.png";
+                break;
+        }
+        }
+    </script>
+</head>
+<body>
+    <div class="Top">
+        <H1>Jogue o dado!</H1>
+
+    </div>
+    <div class="Game">
+        
+        <img src="D1.png"  alt = "Dado" id = "face">
+
+    </br>
+
+        <button onclick="Jogar()" calss = "botao"><h2 class="h2">Jogar</h2></button>
+
+    </div>
+    
+
+</div>
+
+</body>
+</html>
